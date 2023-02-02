@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>practicing promises</h1>
+
+    <script>
+        const fetch1 = fetch("https://inshorts.deta.dev/news?category=science");
+        const fetch2 = fetch("https://inshorts.deta.dev/news?category=sports");
+        const fetch3 = fetch("https://inshorts.deta.dev/news?category=automobile");
+        const fetch4 = fetch("https://inshorts.deta.dev/news?category=politics");
+        const fetch5 = fetch("https://inshorts.deta.dev/news?category=world");
+        const fetch6 = fetch("https://inshorts.deta.dev/news?category=hatke");
+
+        Promise.all([fetch1,fetch2,fetch3,fetch4,fetch5,fetch6])
+        .then(response => {
+            return Promise.all(response.map(value => value.json()));
+        }).then(data => console.log(data));
+    </script>
+</body>
+</html>

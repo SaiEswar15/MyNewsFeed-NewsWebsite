@@ -1,12 +1,12 @@
 
 async function  fetchData()
 {
-    const fetch1 = fetch("https://inshorts.deta.dev/news?category=science");
-    const fetch2 = fetch("https://inshorts.deta.dev/news?category=sports");
-    const fetch3 = fetch("https://inshorts.deta.dev/news?category=automobile");
-    const fetch4 = fetch("https://inshorts.deta.dev/news?category=politics");
-    const fetch5 = fetch("https://inshorts.deta.dev/news?category=world");
-    const fetch6 = fetch("https://inshorts.deta.dev/news?category=hatke");
+    const fetch1 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=science");
+    const fetch2 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=sports");
+    const fetch3 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=automobile");
+    const fetch4 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=politics");
+    const fetch5 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=world");
+    const fetch6 = fetch("https://cors-anywhere.herokuapp.com/https://inshorts.deta.dev/news?category=hatke");
     
     let f = await Promise.all([fetch1,fetch2,fetch3,fetch4,fetch5,fetch6])
     .then(response => {
